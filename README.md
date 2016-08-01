@@ -1,5 +1,5 @@
 # Nested set - Nodes
-@Author Dawid Winiarz
+@dwiniarz
 
 
 ## Start
