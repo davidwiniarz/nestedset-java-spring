@@ -180,7 +180,7 @@
                         var postData = $(this).serializeArray();
                         $.post(action_url, postData, function (data) {
                             $('#saved-info-modal').modal({
-                                show: 'treu'
+                                show: 'true'
                             });
                         })
                     });
