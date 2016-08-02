@@ -13,8 +13,7 @@ public class NodeController {
     private NodeService service;
 
     @RequestMapping(value = "/node/add", method = RequestMethod.POST)
-    public
-    String addNode(@ModelAttribute("node") Node node, @RequestParam("currentNodeId") int id, @RequestParam("method") String method) throws Exception {
+    public String addNode(@ModelAttribute("node") Node node, @RequestParam("currentNodeId") int id, @RequestParam("method") String method) throws Exception {
 
         Node parent = service.findOneById(id);
         if (method.equals("first")) {
@@ -29,10 +28,8 @@ public class NodeController {
     @RequestMapping(value = "/node/edit", method = RequestMethod.POST)
     public String editNode(@ModelAttribute("node") Node node) throws Exception {
         Node currentNode = service.findOneById(node.getId());
-        currentNode.setValue(node.getValue());
-        currentNode.setName(node.getName());
+        currentNode = service.updateFileds(currentNode, node);
         service.update(currentNode);
-
         return "redirect:/";
     }
 

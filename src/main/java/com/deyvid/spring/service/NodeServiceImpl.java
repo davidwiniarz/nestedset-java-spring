@@ -340,5 +340,12 @@ public class NodeServiceImpl implements NodeService {
         dao.moveToOtherTree(node, newParent);
     }
 
+    @Override
+    @Transactional
+    public Node updateFileds(Node currentNode, Node node) {
+        currentNode.setValue(node.getValue());
+        currentNode.setName(node.getName());
+        return currentNode;
+    }
 
 }

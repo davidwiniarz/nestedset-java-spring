@@ -55,4 +55,6 @@ public interface NodeService {
     public void deleteNode(Node n);
 
     public void moveToOtherTree(Node node, Node newParent);
+
+    public Node updateFileds(Node currentNode, Node node);
 }
