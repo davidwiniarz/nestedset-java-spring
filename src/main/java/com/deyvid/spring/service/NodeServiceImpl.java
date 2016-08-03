@@ -328,7 +328,7 @@ public class NodeServiceImpl implements NodeService {
     }
 
     /**
-     * Moves node to antoher subtree/parent (not working yet)
+     * Moves node to another subtree/parent (not working yet)
      *
      * @param node
      * @param newParent
@@ -342,7 +342,7 @@ public class NodeServiceImpl implements NodeService {
 
     @Override
     @Transactional
-    public Node updateFileds(Node currentNode, Node node) {
+    public Node updateFields(Node currentNode, Node node) {
         currentNode.setValue(node.getValue());
         currentNode.setName(node.getName());
         return currentNode;

@@ -51,13 +51,13 @@
 
     <beans:bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
                 destroy-method="close">
-        <!--<beans:property name="driverClassName" value="com.mysql.jdbc.Driver"/>-->
-        <!--<beans:property name="url"-->
-                        <!--value="jdbc:mysql://127.0.0.1/spring-test"/>-->
-        <beans:property name="driverClassName" value="org.hsqldb.jdbc.JDBCDriver"/>
+        <beans:property name="driverClassName" value="com.mysql.jdbc.Driver"/>
         <beans:property name="url"
-        value="jdbc:hsqldb:hsql://localhost/xdb"/>
-        <beans:property name="username" value="sa"/>
+                        value="jdbc:mysql://127.0.0.1/spring-test"/>
+        <!--<beans:property name="driverClassName" value="org.hsqldb.jdbc.JDBCDriver"/>-->
+        <!--<beans:property name="url"-->
+        <!--value="jdbc:hsqldb:hsql://localhost/xdb"/>-->
+        <beans:property name="username" value="root"/>
         <beans:property name="password" value=""/>
     </beans:bean>
 
@@ -69,7 +69,7 @@
                 <beans:value>com.deyvid.spring.model.Node</beans:value>
             </beans:list>
         </beans:property>
-        <beans:property name="configLocation" value="classpath:hibernate.cfg.xml"/>
+        <beans:property name="configLocation" value="/WEB-INF/hibernate.cfg.xml"/>
     </beans:bean>
 
     <tx:annotation-driven transaction-manager="transactionManager"/>

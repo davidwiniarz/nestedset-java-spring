@@ -28,7 +28,7 @@ public class NodeController {
     @RequestMapping(value = "/node/edit", method = RequestMethod.POST)
     public String editNode(@ModelAttribute("node") Node node) throws Exception {
         Node currentNode = service.findOneById(node.getId());
-        currentNode = service.updateFileds(currentNode, node);
+        currentNode = service.updateFields(currentNode, node);
         service.update(currentNode);
         return "redirect:/";
     }

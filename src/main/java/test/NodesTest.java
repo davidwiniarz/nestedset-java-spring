@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.Random;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = "classpath:applicationContext.xml")
+@ContextConfiguration(locations = "classpath:testApplicationContext.xml")
 public class NodesTest {
 
     @InjectMocks
