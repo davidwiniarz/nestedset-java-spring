@@ -6,8 +6,8 @@
 <hibernate-configuration>
     <session-factory>
         <!-- We're using MySQL database so the dialect needs to MySQL as well-->
-        <!--<property name="hibernate.dialect">org.hibernate.dialect.HSQLDialect</property>-->
-        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.HSQLDialect</property>
+        <!--<property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>-->
         <!-- Enable this to see the SQL statements in the logs-->
         <property name="show_sql">false</property>
         <!--<property name="hibernate.current_session_context_class">thread</property>-->
