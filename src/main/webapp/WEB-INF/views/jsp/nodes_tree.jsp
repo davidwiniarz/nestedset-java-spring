@@ -80,7 +80,7 @@
                                         aria-hidden="true">&times;</span></button>
                                 <h4 class="modal-title">Add child</h4>
                             </div>
-                            <c:url var="addAction" value="/node/add"></c:url>
+                            <c:url var="addAction" value="/node/add"/>
                             <form:form method="POST" action="${addAction}" commandName="node">
                                 <div class="modal-body">
                                     <div class="form-group">
@@ -99,7 +99,7 @@
                                     <div class="form-group">
                                         <form:label path="value" for="node_value">Value</form:label>
                                         <form:input path="value" class="form-control" id="new_node_value"
-                                                    placeholder="Node's value"
+                                                    placeholder="Node's value" type="number"
                                                     required="required"/>
                                     </div>
                                     <input type="hidden" name="currentNodeId" value="${node.id}"/>
@@ -121,7 +121,7 @@
                                         aria-hidden="true">&times;</span></button>
                                 <h4 class="modal-title">Edit</h4>
                             </div>
-                            <c:url var="editAction" value="/node/edit"></c:url>
+                            <c:url var="editAction" value="/node/edit"/>
 
                             <form:form method="POST" action="${editAction}" commandName="node" id="form-edit${node.id}">
                                 <div class="modal-body">
@@ -137,7 +137,7 @@
                                         <div class="form-group">
                                             <form:label path="value" for="node_value">Value</form:label>
                                             <form:input path="value" class="form-control" id="node_value"
-                                                        placeholder="Node's value"
+                                                        placeholder="Node's value" type="number"
                                                         required="required" value="${node.value}"/>
                                         </div>
                                         <form:hidden path="id" value="${node.id}"/>

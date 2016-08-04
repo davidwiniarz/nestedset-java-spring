@@ -13,6 +13,6 @@
         <!--<property name="hibernate.current_session_context_class">thread</property>-->
         <!-- This will drop our existing database and re-create a new one.
                 Existing data will be deleted! -->
-        <property name="hbm2ddl.auto">create-drop</property>
+        <property name="hbm2ddl.auto">update</property>
     </session-factory>
 </hibernate-configuration>
